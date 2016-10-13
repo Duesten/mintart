@@ -1,0 +1,136 @@
+@(items: Seq[Item])
+
+@import helper._
+
+@main("The WORM Pirate Bay - Results") {
+    <div class="container">
+        <form action="@routes.Items.textSearch" method="post" class="bordered-searchnavbar">
+            <div class="navbar">
+                <a href="@routes.Items.list()">Browse items</a>
+                |
+                <a href="@routes.Items.showCategories">Browse categories</a>
+                |
+                <a class="link-disabled"   href="">Top 100</a>
+                |
+                <a class="link-disabled" href="">Recent</a>
+                |
+                <a class="link-disabled" href="">Featured</a>
+                |
+                <a href="/about">About thepiratebay</a>
+            </div>
+            <a href="/">
+                <img src="@routes.Assets.versioned("images/WORMPirateBay_logo_AmySuoWu.png")" class="bordered-searchnavbar-img"/>
+            </a>
+            <input type="text" class="centered searchbar" name="q" placeholder="Pirate search..."/>
+            <button type="submit" name="searchType" value="normal">Pirate Search</button>
+        </form>
+        <div class="page-title-bar">Items : @items.size results</div>
+        <table class="result-list tac mt15">
+            <thead class="result-list-header">
+                <tr>
+                    <td class="boldness-is-the-key-LUL" colspan="13">
+                        Browse categories
+                    </td>
+                </tr>
+            </thead>
+            <tbody class="result-list-results categories">
+                <tr class="tac">
+                    <td>
+                        <a href="@routes.Items.showCategory("DVD")">DVD</a>
+                    </td>
+                    <td>
+                        <a href="@routes.Items.showCategory("VHS")">VHS</a>
+                    </td>
+                    <td>
+                        <a href="@routes.Items.showCategory("CD")">CD</a>
+                    </td>
+                    <td>
+                        <a href="@routes.Items.showCategory("HDDVD")">HD DVD</a>
+                    </td>
+                    <td>
+                        <a href="@routes.Items.showCategory("LP")">LP</a>
+                    </td>
+                    <td>
+                        <a href="@routes.Items.showCategory("book")">Book</a>
+                    </td>
+                    <td>
+                        <a href="@routes.Items.showCategory("dosier")">Dossier</a>
+                    </td>
+                    <td>
+                        <a href="@routes.Items.showCategory("gadget")">Gadget</a>
+                    </td>
+                    <td>
+                        <a href="@routes.Items.showCategory("tape")">Tape</a>
+                    </td>
+                    <td>
+                        <a href="@routes.Items.showCategory("zine")">Zine</a>
+                    </td>
+                    <td>
+                        <a href="@routes.Items.showCategory("game")">Game</a>
+                    </td>
+                    <td>
+                        <a href="@routes.Items.showCategory("FILMSTRIP")">Filmstrip</a>
+                    </td>
+                    <td>
+                        <a href="@routes.Items.showCategory("FLOPPY DICS")">Floppy</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="result-list m0 mb15">
+            <thead class="result-list-header">
+                <tr>
+                    <th class="tac">
+                        Type
+                    </th>
+                    <th class="tac">
+                        Title
+                    </th>
+                    <th class="tac">
+                        Artists
+                    </th>
+                    <th class="tac">
+                        Year
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="result-list-results">
+
+                @items.map { item =>
+                    <tr>
+                        <td class="tac"><a href="@routes.Items.showCategory(item.medium.getOrElse(""))">@item.medium</a></td>
+                        <td>
+                            <a href="@routes.Items.show(item.id)">@item.title + @item.description</a>
+                        </td>
+                        <td><a href="@routes.Items."></a>@item.creators</td>
+                        <td class="tac">@item.year</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+        @*<div class="result-list-header">*@
+            @*<span>One</span>*@
+            @*<span>Two</span>*@
+            @*<span>Three</span>*@
+            @*<span>Four</span>*@
+        @*</div>*@
+        @*<ul class="result-list">*@
+            @*items.map { item =>*@
+                @*<li>*@
+                    @*<form action="@routes.Items.delete(item.id)" method="post">*@
+                        @*<span>*@
+                            @*<a href="@routes.Items.show(item.id)">@item.title</a>*@
+                            @*<input type="hidden" name="id" id="id" value="@item.id">*@
+                            @*<button type="submit">Delete item</button>*@
+                        @*</span>*@
+                    @*</form>*@
+                @*</li>*@
+            @*}*@
+        @*</ul>*@
+
+    </div>
+
+}
