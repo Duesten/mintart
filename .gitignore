@@ -1,1 +1,6 @@
 project
+logs
+*.ipr
+*.iws
+.idea
+target
