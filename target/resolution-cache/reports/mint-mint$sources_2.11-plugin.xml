@@ -6,8 +6,8 @@
 		module="mint$sources_2.11"
 		revision="v.01"
 		conf="plugin"
-		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20161113181322"/>
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, fork-run"
+		date="20161202140556"/>
 	<dependencies>
 	</dependencies>
 </ivy-report>
