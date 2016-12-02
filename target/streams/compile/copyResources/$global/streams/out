@@ -1,8 +1,0 @@
-[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(C:\Users\Mo Lester\Desktop\mintart\conf\application.conf,C:\Users\Mo Lester\Desktop\mintart\target\scala-2.11\classes\application.conf)[0m
-[0m[[0mdebug[0m] [0m	(C:\Users\Mo Lester\Desktop\mintart\conf\db,C:\Users\Mo Lester\Desktop\mintart\target\scala-2.11\classes\db)[0m
-[0m[[0mdebug[0m] [0m	(C:\Users\Mo Lester\Desktop\mintart\conf\logback.xml,C:\Users\Mo Lester\Desktop\mintart\target\scala-2.11\classes\logback.xml)[0m
-[0m[[0mdebug[0m] [0m	(C:\Users\Mo Lester\Desktop\mintart\conf\routes,C:\Users\Mo Lester\Desktop\mintart\target\scala-2.11\classes\routes)[0m
-[0m[[0mdebug[0m] [0m	(C:\Users\Mo Lester\Desktop\mintart\conf\db\migration,C:\Users\Mo Lester\Desktop\mintart\target\scala-2.11\classes\db\migration)[0m
-[0m[[0mdebug[0m] [0m	(C:\Users\Mo Lester\Desktop\mintart\conf\db\migration\default,C:\Users\Mo Lester\Desktop\mintart\target\scala-2.11\classes\db\migration\default)[0m
-[0m[[0mdebug[0m] [0m	(C:\Users\Mo Lester\Desktop\mintart\conf\db\migration\default\V1__Add_Items_And_Users.sql,C:\Users\Mo Lester\Desktop\mintart\target\scala-2.11\classes\db\migration\default\V1__Add_Items_And_Users.sql)[0m
