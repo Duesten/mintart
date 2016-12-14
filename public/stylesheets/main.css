@@ -459,4 +459,13 @@ ul#menu{
 
 body{
     min-width: 1280px;
+    height: 100%;
+    background-color: black !important;
+}
+
+.content{
+    display: block;
+    margin: 0 auto;
+    width: 650px;
+    padding-top: 40px;
 }
